@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mnrealsolutions — Home</title>
+  <style>
+
+  </style>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"
+/>
+</head>
+<body>
+
+
+  <!-- Header -->
+  <header class="header" id="inicio">
+    <div class="container header-row">
+    <a class="brand" href="#inicio" aria-label="Voltar ao início">
+  <span class="brand-mark">
+    <img
+      src="./images/mnrealsolutions (3).png"
+      alt="mnfiscalsolutions.com Internacional"
+      class="brand-logo"
+    />
+  </span>
+  <span class="brand-name">mnrealsolutions</span>
+</a>
+
+
+      <nav class="nav" id="nav">
+        
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="./pages/blogpost.html">BLOG</a>
+        <a class="nav-cta" href="#contato">Solicitar atendimento</a>  
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="container mobile-inner">
+        <a href="#servicos" class="m-link">Serviços</a>
+        <a href="#como-funciona" class="m-link">Como funciona</a>
+        <a href="#depoimentos" class="m-link">Depoimentos</a>
+        <a href="#faq" class="m-link">FAQ</a>
+        <a href="#contato" class="m-link m-cta">Solicitar atendimento</a>
+      </div>
+    </div>
+  </header>
+
+ <!-- Hero -->
+<section class="hero hero-v2" id="inicio">
+  <div class="container hero-grid hero-grid-v2">
+
+    <!-- LEFT: logo + headline + CTA + rating -->
+    <div class="hero-left">
+
+      <!-- small logo/brand like screenshot -->
+      <div class="hero-brand">
+        <img
+          class="hero-logo"
+          src="./images/mnrealsolutions (3).png"
+          alt="Help Cartório Internacional"
+        />
+        <div class="hero-brand-text">
+          <span>mnrealsolutions</span>
+          <strong>INTERNACIONAL</strong>
+        </div>
+      </div>
+
+      <h1 class="hero-title">
+        Especialista em você,<br />
+        <span class="hero-highlight">brasileiro expatriado.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Assessoria cartorial, direito de família internacional e tributação internacional.
+      </p>
+
+      <div class="hero-actions hero-actions-v2">
+        <a class="btn primary hero-cta" href="#contato">
+          <span class="cta-mark">◎</span>
+          Agende seu atendimento
+        </a>
+      </div>
+
+      <!-- ✅ Updated: real avatar images -->
+      <div class="hero-rating">
+        <div class="avatar-row" aria-label="Clientes satisfeitos">
+          <img class="av" src="./images/avartarFour.jpg" alt="Cliente 1" />
+          <img class="av" src="./images/avartarOne.jpg" alt="Cliente 2" />
+          <img class="av" src="./images/avatarTwo.jpg" alt="Cliente 3" />
+          <img class="av" src="./images/avartarThree.jpg" alt="Cliente 4" />
+        </div>
+
+        <div class="stars-row">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">+110 clientes satisfeitos</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: video block (✅ click to play) -->
+    <div class="hero-right">
+      <div class="video-card" id="heroVideoCard" aria-label="Assistir vídeo">
+        <div class="video-thumb" id="heroVideoThumb">
+          <img src="assets/video-thumb.jpg" alt="Vídeo" />
+
+          <div class="video-overlay" id="heroVideoOverlay">
+            <div class="video-overlay-text">
+              <span>CLIQUE AQUI</span>
+              <strong>PARA ASSISTIR</strong>
+            </div>
+
+            <button
+              class="play-btn"
+              id="heroPlayBtn"
+              type="button"
+              aria-label="Reproduzir vídeo"
+            >
+              <span class="play-triangle"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- hidden until click -->
+       <video
+  class="hero-video"
+  id="heroVideo"
+  controls
+  preload="metadata"
+  poster="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80"
+>
+  <source
+    src="https://cdn.coverr.co/videos/coverr-ai-brain-network-8943/1080p.mp4"
+    type="video/mp4"
+  />
+  Seu navegador não suporta vídeo.
+</video>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Logos / trust -->
+  <section class="trust">
+    <div class="container trust-row">
+      <p class="muted">Atuação voltada para processos e documentação — com atendimento humanizado.</p>
+      <div class="trust-chips">
+        <span class="chip">Cartório</span>
+        <span class="chip">Família</span>
+        <span class="chip">Tributação</span>
+        <span class="chip">Internacional</span>
+      </div>
+    </div>
+  </section>
+
+<!-- Sobre a Help (bloco acima de Serviços) -->
+<section class="section about-help" id="sobre">
+  <div class="container">
+    <div class="about-card">
+      <div class="about-inner">
+
+        <!-- LEFT big image -->
+        <div class="about-big">
+          <img src="./images/about-building.jpg" alt="Sede e atuação internacional" />
+        </div>
+
+        <!-- MIDDLE stacked portraits -->
+        <div class="about-people">
+          <img class="about-person top" src="./images/about-person-1.jpg" alt="Especialista 1" />
+          <img class="about-person bottom" src="./images/about-person-2.jpg" alt="Especialista 2" />
+        </div>
+
+        <!-- RIGHT text -->
+        <div class="about-text">
+          <span class="about-line"></span>
+          <h2>Sobre a Help</h2>
+
+          <p>
+            Desde 2022, a Help Cartório Internacional, com sede no Reino Unido e atuação global,
+            é referência em soluções jurídicas para brasileiros expatriados. Kelen Souza,
+            International Wealth Planner, e Giulya Naves, especialista em direito de família
+            internacional, a Help nasceu para simplificar desafios e entregar segurança,
+            proteção e tranquilidade além das fronteiras.
+          </p>
+
+          <p>
+            Atuamos em três pilares estratégicos — assessoria cartorial, direito de família
+            internacional e tributação internacional — sempre com precisão técnica, linguagem
+            acessível e atendimento humanizado.
+          </p>
+
+          <p>
+            Mais do que serviços, entregamos proteção, confiança e eficiência, transformando a
+            complexidade de processos jurídicos e tributários em soluções práticas e seguras
+            para quem escolheu viver além das fronteiras.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Floating social buttons (fixed) -->
+<div class="floating-social" aria-label="Links rápidos">
+  <a
+    class="float-btn ig"
+    href="https://www.instagram.com/mnrealsolutions/"
+    target="_blank"
+    rel="noopener"
+    aria-label="Abrir Instagram"
+    title="Instagram"
+  >
+    <img src="./images/instagram.jpg" alt="" />
+  </a>
+
+  <a
+    class="float-btn wa"
+    href="https://wa.me/5511999999999"
+    target="_blank"
+    rel="noopener"
+    aria-label="Abrir WhatsApp"
+    title="WhatsApp"
+  >
+    <img src="./images/whatsApp.jpg" alt="" />
+  </a>
+</div>
+
+
+
+ <!-- Services -->
+<section class="section" id="servicos">
+  <div className="container">
+    <div class="section-head">
+      <h2>Serviços principais</h2>
+      <p class="muted">Escolha o que você precisa e nós te guiamos em cada etapa.</p>
+    </div>
+
+    <div class="services-stack">
+
+      <!-- 1 -->
+      <article class="service-card">
+        <div class="service-inner">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=900&q=80"
+              alt="Certidões e 2ª via"
+            />
+          </div>
+
+          <div class="service-content">
+            <span class="service-line"></span>
+            <h3>1. Certidões & 2ª via</h3>
+            <p class="service-desc">Solicitação, acompanhamento e entrega conforme necessidade.</p>
+
+            <p class="service-label">Principais serviços:</p>
+            <ul>
+              <li>Solicitação de certidões (nascimento, casamento, óbito).</li>
+              <li>2ª via e retificações simples.</li>
+              <li>Acompanhamento do processo até a emissão.</li>
+              <li>Orientação para uso no Brasil e no exterior.</li>
+            </ul>
+
+            <button class="service-btn link-btn" data-service="Certidões & 2ª via">SAIBA MAIS</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="service-card">
+        <div class="service-inner">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80"
+              alt="Procurações"
+            />
+          </div>
+
+          <div class="service-content">
+            <span class="service-line"></span>
+            <h3>2. Procurações</h3>
+            <p class="service-desc">Orientação sobre documentos, modelo e formalização adequada.</p>
+
+            <p class="service-label">Principais serviços:</p>
+            <ul>
+              <li>Modelos de procuração (pública/particular).</li>
+              <li>Checklist de documentos exigidos.</li>
+              <li>Orientação para assinatura e reconhecimento.</li>
+              <li>Validade e uso para instituições no Brasil.</li>
+            </ul>
+
+            <button class="service-btn link-btn" data-service="Procurações">SAIBA MAIS</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="service-card">
+        <div class="service-inner">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1523952578875-e6bb18b26645?auto=format&fit=crop&w=900&q=80"
+              alt="Registros e Averbações"
+            />
+          </div>
+
+          <div class="service-content">
+            <span class="service-line"></span>
+            <h3>3. Registros & Averbações</h3>
+            <p class="service-desc">Atualizações de estado civil e registros com exigências claras.</p>
+
+            <p class="service-label">Principais serviços:</p>
+            <ul>
+              <li>Averbação de casamento/divórcio.</li>
+              <li>Registro de documentos emitidos no exterior.</li>
+              <li>Exigências e certidões necessárias.</li>
+              <li>Acompanhamento até a finalização.</li>
+            </ul>
+
+            <button class="service-btn link-btn" data-service="Registros & Averbações">SAIBA MAIS</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="service-card">
+        <div class="service-inner">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=900&q=80"
+              alt="Reconhecimento e Autenticação"
+            />
+          </div>
+
+          <div class="service-content">
+            <span class="service-line"></span>
+            <h3>4. Reconhecimento & Autenticação</h3>
+            <p class="service-desc">Procedimentos e validações para uso no Brasil e no exterior.</p>
+
+            <p class="service-label">Principais serviços:</p>
+            <ul>
+              <li>Orientação sobre autenticação de documentos.</li>
+              <li>Reconhecimento de assinatura (quando aplicável).</li>
+              <li>Uso consular e exigências internacionais.</li>
+              <li>Checklist para evitar retrabalho.</li>
+            </ul>
+
+            <button class="service-btn link-btn" data-service="Reconhecimento & Autenticação">SAIBA MAIS</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="service-card">
+        <div class="service-inner">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+              alt="Direito de família internacional"
+            />
+          </div>
+
+          <div class="service-content">
+            <span class="service-line"></span>
+            <h3>5. Direito de família internacional</h3>
+            <p class="service-desc">Orientação para processos com repercussão internacional.</p>
+
+            <p class="service-label">Principais serviços:</p>
+            <ul>
+              <li>Divórcio e reconhecimento de decisões estrangeiras.</li>
+              <li>União estável e efeitos no Brasil.</li>
+              <li>Documentação e registros relacionados.</li>
+              <li>Organização do processo passo a passo.</li>
+            </ul>
+
+            <button class="service-btn link-btn" data-service="Direito de família internacional">SAIBA MAIS</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="service-card">
+        <div class="service-inner">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=900&q=80"
+              alt="Tributação e regularização"
+            />
+          </div>
+
+          <div class="service-content">
+            <span class="service-line"></span>
+            <h3>6. Tributação & regularização</h3>
+            <p class="service-desc">Direcionamento inicial e checklist para regularidade documental.</p>
+
+            <p class="service-label">Principais serviços:</p>
+            <ul>
+              <li>Checklist de regularização e documentação.</li>
+              <li>Orientação inicial para expatriados.</li>
+              <li>Organização de informações e próximos passos.</li>
+              <li>Encaminhamento conforme necessidade.</li>
+            </ul>
+
+            <button class="service-btn link-btn" data-service="Tributação & regularização">SAIBA MAIS</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Benefícios / Contratação (layout igual ao screenshot) -->
+<section class="section alt benefits" id="como-funciona">
+  <div class="container">
+    <div class="benefits-grid">
+      <!-- ESQUERDA -->
+      <div class="benefits-left">
+        <p class="benefits-kicker">Benefícios de contratar a</p>
+        <h2 class="benefits-title">
+          MN<br />
+          fiscal<br />
+       solutions
+        </h2>
+      </div>
+
+      <!-- DIREITA -->
+      <div class="benefits-right">
+        <article class="benefit-card">
+          <h3>Confiança e sigilo:</h3>
+          <p>Tratamos cada caso com máxima discrição e responsabilidade.</p>
+        </article>
+
+        <article class="benefit-card">
+          <h3>Agilidade e segurança:</h3>
+          <p>Processos conduzidos de forma assertiva, com prevenção de riscos.</p>
+        </article>
+
+        <article class="benefit-card">
+          <h3>Soluções completas:</h3>
+          <p>Do documento simples às demandas internacionais mais complexas.</p>
+        </article>
+
+        <article class="benefit-card">
+          <h3>Atendimento global:</h3>
+          <p>Suporte para brasileiros em qualquer país.</p>
+        </article>
+
+        <article class="benefit-card">
+          <h3>Equipe especializada:</h3>
+          <p>
+            Advogados, contadores, consultores e especialistas em cartório,
+            tributação, direito internacional e planejamento patrimonial
+            internacional.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Instagram Follow -->
+<section class="section" id="instagram">
+  <div class="container">
+    <div class="instagram-box instagram-panel">
+      <!-- top row -->
+      <div class="instagram-top">
+        <div class="instagram-left">
+          <h2>Siga nosso Instagram:</h2>
+          <p>@mnrealsolutions.com</p>
+        </div>
+
+        <a
+          href="https://www.instagram.com/helpcartorio/"
+          target="_blank"
+          class="instagram-btn"
+          rel="noopener"
+        >
+          <span class="ig-icon">📷</span>
+          Seguir agora
+        </a>
+      </div>
+
+      <!-- grid -->
+      <div class="instagram-grid">
+        <!-- Image post -->
+        <a
+          class="ig-post"
+          href="#"
+          aria-label="Instagram post 1"
+          data-type="image"
+          data-src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=70"
+            alt="Instagram image 1"
+          />
+          <span class="ig-corner">▢</span>
+        </a>
+
+        <!-- Image post -->
+        <a
+          class="ig-post"
+          href="#"
+          aria-label="Instagram post 2"
+          data-type="image"
+          data-src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1600&q=80"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=70"
+            alt="Instagram image 2"
+          />
+          <span class="ig-corner">▢</span>
+        </a>
+
+        <!-- Image post -->
+        <a
+          class="ig-post"
+          href="#"
+          aria-label="Instagram post 3"
+          data-type="image"
+          data-src="https://images.unsplash.com/photo-1521790797524-b2497295b8a0?auto=format&fit=crop&w=1600&q=80"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1521790797524-b2497295b8a0?auto=format&fit=crop&w=800&q=70"
+            alt="Instagram image 3"
+          />
+          <span class="ig-corner">▢</span>
+        </a>
+
+        <!-- Video post (uses MP4 demo file) -->
+        <a
+          class="ig-post ig-video"
+          href="#"
+          aria-label="Instagram video 4"
+          data-type="video"
+          data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+          data-poster="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=70"
+            alt="Instagram video cover 4"
+          />
+          <span class="ig-play">▶</span>
+        </a>
+
+        <!-- Video post -->
+        <a
+          class="ig-post ig-video"
+          href="#"
+          aria-label="Instagram video 5"
+          data-type="video"
+          data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+          data-poster="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=70"
+            alt="Instagram video cover 5"
+          />
+          <span class="ig-play">▶</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Modal (add once near end of body) -->
+<div class="ig-modal" id="igModal" aria-hidden="true">
+  <div class="ig-modal-overlay" data-close="true"></div>
+
+  <div class="ig-modal-card" role="dialog" aria-modal="true" aria-label="Media viewer">
+    <button class="ig-modal-close" type="button" aria-label="Close" data-close="true">✕</button>
+
+    <!-- image -->
+    <img class="ig-modal-image" id="igModalImage" alt="" />
+
+    <!-- video -->
+    <video class="ig-modal-video" id="igModalVideo" controls playsinline></video>
+  </div>
+</div>
+
+
+
+
+  <!-- FAQ -->
+<section class="section alt faq-section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Perguntas Frequentes</h2>
+      <p class="muted">Respostas rápidas para dúvidas comuns.</p>
+    </div>
+
+    <div class="faq-list">
+      <button class="faq-row" aria-expanded="false">
+        <span class="faq-text">1. Posso resolver serviços cartoriais do Brasil mesmo morando no exterior?</span>
+        <span class="faq-chevron">⌄</span>
+      </button>
+      <div class="faq-answer">
+        Sim. O atendimento é online e orienta o passo a passo de acordo com o serviço.
+      </div>
+
+      <button class="faq-row" aria-expanded="false">
+        <span class="faq-text">2. Como funciona a homologação de divórcio ou sentenças estrangeiras?</span>
+        <span class="faq-chevron">⌄</span>
+      </button>
+      <div class="faq-answer">
+        Depende do tipo de demanda e exigências do processo. Você recebe uma estimativa após a análise inicial.
+      </div>
+
+      <button class="faq-row" aria-expanded="false">
+        <span class="faq-text">3. Qual a importância da saída fiscal do Brasil?</span>
+        <span class="faq-chevron">⌄</span>
+      </button>
+      <div class="faq-answer">
+        A saída fiscal ajuda a regularizar sua situação tributária ao morar fora e evita cobranças indevidas.
+      </div>
+
+      <button class="faq-row" aria-expanded="false">
+        <span class="faq-text">4. A Help pode atuar em qualquer país?</span>
+        <span class="faq-chevron">⌄</span>
+      </button>
+      <div class="faq-answer">
+        Sim. Orientamos brasileiros no exterior e adaptamos o passo a passo conforme o país e a necessidade.
+      </div>
+
+      <button class="faq-row" aria-expanded="false">
+        <span class="faq-text">5. Os serviços têm validade jurídica?</span>
+        <span class="faq-chevron">⌄</span>
+      </button>
+      <div class="faq-answer">
+        Sim. Seguimos as exigências legais e cartoriais para garantir validade e conformidade.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section class="section contact-section" id="contato">
+  <div class="container contact-grid">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+      <h2 class="contact-title">
+        Fale com quem<br />
+        entende sobre o<br />
+        assunto!
+      </h2>
+
+      <p class="contact-sub">
+        Agende seu atendimento preenchendo<br />
+        nosso formulário
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="contact-right">
+      <form id="contactForm" class="contact-card">
+
+        <label>
+          Nome <span>*</span>
+          <input type="text" placeholder="Seu nome e sobrenome" required />
+        </label>
+
+        <label>
+          Email <span>*</span>
+          <input type="email" placeholder="Seu melhor E-mail" required />
+        </label>
+
+        <label>
+          Telefone <span>*</span>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Insira seu número"
+            required
+          />
+        </label>
+
+        <label>
+          Mensagem
+          <textarea rows="4" placeholder="Escreva sua mensagem"></textarea>
+        </label>
+
+        <button type="submit" class="btn contact-btn">
+          Enviar dados
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+ <div class="container footer-row">
+  <div class="footer-brand">
+    <span class="brand-mark small">
+      <img
+        src="./images/mnrealsolutions (3).png"
+        alt="mnfiscalsolutions"
+        class="brand-logo"
+      />
+    </span>
+    <div>
+      <strong>mnrealsolutions</strong>
+      <p class="muted">Assessoria cartorial online</p>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <a href="#servicos">Serviços</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato">Contato</a>
+  </div>
+
+  <p class="muted">© <span id="year"></span> — Todos os direitos reservados.</p>
+</div>
+
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Serviços">
+      <div class="modal-head">
+        <h3 id="modalTitle">Serviços</h3>
+        <button class="icon-btn" id="closeModalBtn" aria-label="Fechar">✕</button>
+      </div>
+      <p class="muted" id="modalText">
+        Selecione um serviço para ver detalhes.
+      </p>
+      <div class="modal-actions">
+        <a class="btn primary" href="#contato" id="modalCta">Solicitar atendimento</a>
+        <button class="btn ghost" id="modalOk">Ok</button>
+      </div>
+    </div>
+  </div>
+  <script
+  src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"
+  defer
+></script>
+ <script src="./js/script.js">
+  
+ </script>
+</body>
+</html>
