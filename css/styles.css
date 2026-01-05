@@ -1160,9 +1160,7 @@ input:focus, select:focus, textarea:focus{
   .container{ width: min(var(--max), calc(100% - 28px)); }
 }
 
-/* =========================
-   Instagram Follow Block (your existing styles)
-========================= */
+
 
 /* =========================
    Instagram Follow Block (your existing styles)
@@ -1671,3 +1669,35 @@ body.ig-modal-open{
 
 
 
+/*animation section */
+/* =========================
+   Scroll-trigger animations
+========================= */
+
+/* initial hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+}
+
+/* visible state */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* optional variants */
+.reveal.reveal-left { transform: translateX(-28px); }
+.reveal.reveal-right { transform: translateX(28px); }
+.reveal.reveal-zoom { transform: scale(0.96); }
+
+/* accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

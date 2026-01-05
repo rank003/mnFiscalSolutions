@@ -1,20 +1,48 @@
-/* ==========================
-   MAIN SCRIPT (merged + efficient)
+/* =========================
+   MAIN SCRIPT (combined)
+   - Scroll-trigger reveal
    - Year
    - Mobile menu
    - FAQ (supports BOTH .faq-q and #faq .faq-row)
    - Modal (#modal)
    - Service buttons (.link-btn)
    - Forms (lead + contact)
-   - Hero video click-to-play (✅ includes your extra block logic)
+   - Hero video click-to-play (no duplicate binding)
    - Intl phone input (#phone)
-   - ✅ Instagram modal (images + videos)
-========================== */
+   - Instagram modal (images + videos)
+========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
   // ---------- Helpers ----------
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+  // =========================================================
+  // ✅ Scroll-trigger reveal
+  // =========================================================
+  (function () {
+    const elements = document.querySelectorAll("section, footer");
+
+    // add the class to all sections + footer
+    elements.forEach((el) => el.classList.add("reveal"));
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target); // animate once
+          }
+        });
+      },
+      {
+        threshold: 0.15, // show when 15% is visible
+        rootMargin: "0px 0px -80px 0px", // triggers slightly earlier
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  })();
 
   // ---------- Year ----------
   const yearEl = $("#year");
@@ -54,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Type B: #faq .faq-row (new FAQ list like screenshot)
+  // Type B: #faq .faq-row (new FAQ list)
   const faqRows = $$("#faq .faq-row");
   if (faqRows.length) {
     faqRows.forEach((btn) => {
@@ -140,24 +168,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ---------- Hero video: click to play ----------
-  // (kept your original block, and also merges your extra "reset currentTime" logic)
+  // ---------- Hero video: click to play (NO duplicate binding) ----------
   const heroVideoCard = $("#heroVideoCard");
   const heroPlayBtn = $("#heroPlayBtn");
   const heroVideo = $("#heroVideo");
 
   if (heroVideoCard && heroPlayBtn && heroVideo) {
-    heroPlayBtn.addEventListener("click", () => {
-      heroVideoCard.classList.add("is-playing");
+    // prevent double-binding across reloads / multiple scripts
+    if (heroPlayBtn.dataset.bound !== "true") {
+      heroPlayBtn.dataset.bound = "true";
 
-      // ✅ from your extra block: restart + play
-      heroVideo.currentTime = 0;
+      heroPlayBtn.addEventListener("click", () => {
+        heroVideoCard.classList.add("is-playing");
+        heroVideo.currentTime = 0;
 
-      heroVideo.play().catch((err) => {
-        // autoplay may be blocked; user can press play on controls
-        console.warn("Playback blocked:", err);
+        heroVideo.play().catch((err) => {
+          // autoplay may be blocked; user can press play on controls
+          console.warn("Playback blocked:", err);
+        });
       });
-    });
+    }
   }
 
   // ---------- Intl phone input (#phone) ----------
@@ -172,14 +202,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* =========================================================
-     ✅ Instagram modal (images + videos)
-     - opens #igModal
-     - uses #igModalImage + #igModalVideo
-     - expects .ig-post with data-type="image|video" and data-src
-     - optional: data-poster for video
-  ========================================================= */
-
+  // =========================================================
+  // ✅ Instagram modal (images + videos)
+  // =========================================================
   const igModal = $("#igModal");
   const igModalImg = $("#igModalImage");
   const igModalVideo = $("#igModalVideo");
@@ -191,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
       igModal.classList.add("open");
       igModal.setAttribute("aria-hidden", "false");
 
-      // lock scroll (uses your modal CSS class)
+      // lock scroll
       document.body.classList.add("ig-modal-open");
 
       // reset media
@@ -253,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (close) closeIgModal();
     });
 
-    // close on ESC (only when IG modal is open)
+    // close on ESC
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && igModal.classList.contains("open")) {
         closeIgModal();
@@ -261,32 +286,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-/* =========================================================
-   ✅ EXTRA HERO VIDEO BLOCK (kept, but made SAFE)
-   You pasted this separately; keeping it without breaking:
-   - Only attaches if the DOMContentLoaded block above didn't
-     already attach OR if you still want this redundancy.
-   - This will NOT throw errors.
-========================================================= */
-
-(function () {
-  const heroVideoCard = document.getElementById("heroVideoCard");
-  const heroPlayBtn = document.getElementById("heroPlayBtn");
-  const heroVideo = document.getElementById("heroVideo");
-
-  if (!heroVideoCard || !heroPlayBtn || !heroVideo) return;
-
-  // ✅ prevent double-binding if already bound above
-  if (heroPlayBtn.dataset.bound === "true") return;
-  heroPlayBtn.dataset.bound = "true";
-
-  heroPlayBtn.addEventListener("click", () => {
-    heroVideoCard.classList.add("is-playing");
-    heroVideo.currentTime = 0;
-
-    heroVideo.play().catch((err) => {
-      console.warn("Playback blocked:", err);
-    });
-  });
-})();
