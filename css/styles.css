@@ -1745,6 +1745,6 @@ body.ig-modal-open{
 }
 
 /* pause on hover */
-.scroll-band:hover .scroll-content{
+/* .scroll-band:hover .scroll-content{
   animation-play-state: paused;
-}
+} */
