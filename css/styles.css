@@ -3,7 +3,7 @@
 :root {
   --navy: #033439;         /* main background */
   --navy-2: #052649;       /* darker blocks */
-  --gold: #d3bb82;         /* header strip + buttons */
+  --gold: #F79A60;         /* header strip + buttons */
   --gold-2: #c6ab6c;
   --text: #ffffff;
   --muted: rgba(255,255,255,0.72);
@@ -423,7 +423,7 @@ a { color: inherit; text-decoration: none; }
   height: 70px;
   border-radius: 999px;
   background: var(--gold);
-  border: 2px solid rgba(0,0,0,0.18);
+  border: 2px solid rgba(169, 143, 143, 0.18);
   display:grid;
   place-items:center;
   position: relative;
@@ -744,23 +744,11 @@ label{
   font-weight: 700;
 }
 
-input, select, textarea{
-  width:100%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid var(--line-soft);
-  background: rgba(255,255,255,0.08);
-  color: var(--text);
-  outline:none;
-}
 
-input:focus, select:focus, textarea:focus{
-  border-color: rgba(211,187,130,0.9);
-}
 
 .fine{
   margin: 0;
-  color: rgba(255,255,255,0.60);
+  color: rgba(104, 10, 10, 0.6);
   font-size: 11px;
   line-height: 1.4;
 }
@@ -878,12 +866,7 @@ input:focus, select:focus, textarea:focus{
   background: rgba(0,0,0,0.12);
 }
 
-/* ===========================
-   FAQ (screenshot style)
-   =========================== */
 
-
-/* center FAQ block */
 
 /* ===========================
    FAQ section background FIX
@@ -1700,4 +1683,68 @@ body.ig-modal-open{
     transform: none;
     transition: none;
   }
+}
+
+
+
+/* =========================
+   SCROLLING BRAND BAND
+========================= */
+/* FULL BAND */
+.scroll-band{
+  background: var(--gold);
+  border-top: 1px solid rgba(0,0,0,0.12);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  overflow: hidden;                 /* hides overflow cleanly */
+  width: 100%;
+}
+
+/* track */
+.scroll-track{
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* moving row */
+.scroll-content{
+  display: inline-flex;
+  align-items: center;
+  gap: 0;                           /* ✅ no gaps between items */
+  padding: 0;                       /* ✅ remove top/bottom spacing that shows “breaks” */
+  animation: scroll-left 22s linear infinite;
+  will-change: transform;
+}
+
+/* each repeated brand item */
+.scroll-content .scroll-brand{
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 28px;               /* spacing INSIDE each item */
+  margin: 0;                        /* ✅ no external gaps */
+  background: transparent;          /* ✅ band owns the background */
+  text-decoration: none;
+}
+
+/* optional: divider between repeats (nice + still continuous) */
+/* .scroll-content .scroll-brand + .scroll-brand{
+  border-left: 1px solid rgba(7,24,49,0.18);
+} */
+
+/* keep text from wrapping */
+.scroll-content .brand-name{
+  white-space: nowrap;
+}
+
+/* animation */
+@keyframes scroll-left{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* pause on hover */
+.scroll-band:hover .scroll-content{
+  animation-play-state: paused;
 }
