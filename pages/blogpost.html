@@ -141,16 +141,79 @@
 }
 
 
-/* ✅ RESPONSIVE like you want */
-@media (max-width: 980px){
-  .blog-grid{ grid-template-columns: repeat(2, 1fr); }
-  .blog-media{ height: 210px; }
-}
+/* ✅ EXTRA MOBILE FIXES for Blog (add at the VERY END) */
 @media (max-width: 620px){
-  .container{ width: min(var(--max), calc(100% - 28px)); }
-  .blog-grid{ grid-template-columns: 1fr; }
-  body::after{ display:none; } /* optional on very small screens */
+
+  /* Hero spacing + readable text */
+  .blog-hero{
+    padding: 34px 0 18px;
+  }
+
+  .blog-hero h1{
+    font-size: 27px;      /* stronger control on small screens */
+    line-height: 1.05;
+    letter-spacing: -0.4px;
+  }
+
+  .blog-hero p{
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.65;
+    padding: 0 6px;
+  }
+
+  /* Cards: reduce padding + prevent overflow */
+  .blog-wrap{
+    padding: 12px 0 44px;
+  }
+
+  .blog-card{
+    border-radius: 12px;
+  }
+
+  .blog-media{
+    height: 190px;
+  }
+
+  .blog-body{
+    padding: 16px 16px 14px;
+    min-height: auto;     /* important: don’t force tall cards on mobile */
+  }
+
+  .blog-title{
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  .blog-excerpt{
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  /* Badge: smaller so it doesn't look crowded */
+  .blog-pill{
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  /* Pagination: easier to tap */
+  .pagination{
+    padding: 6px 0 18px;
+  }
+
+  .pager{
+    gap: 12px;
+  }
+
+  .page-link{
+    font-size: 16px;
+    padding: 6px 10px;    /* tap area */
+    border-radius: 10px;
+  }
 }
+
   </style>
 </head>
 
