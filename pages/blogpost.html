@@ -141,78 +141,104 @@
 }
 
 
-/* ✅ EXTRA MOBILE FIXES for Blog (add at the VERY END) */
 @media (max-width: 620px){
 
-  /* Hero spacing + readable text */
+  /* =========================
+     HERO (stacked + breathable)
+  ========================== */
   .blog-hero{
-    padding: 34px 0 18px;
+    padding: 28px 0 22px;
+    text-align: center;
   }
 
   .blog-hero h1{
-    font-size: 27px;      /* stronger control on small screens */
-    line-height: 1.05;
-    letter-spacing: -0.4px;
+    font-size: 32px;
+    line-height: 1.08;
+    margin-bottom: 12px;
   }
 
   .blog-hero p{
-    max-width: 100%;
     font-size: 14px;
-    line-height: 1.65;
-    padding: 0 6px;
+    line-height: 1.7;
+    padding: 0 12px;
   }
 
-  /* Cards: reduce padding + prevent overflow */
-  .blog-wrap{
-    padding: 12px 0 44px;
+  /* =========================
+     GRID → ONE COLUMN
+  ========================== */
+  .blog-grid{
+    grid-template-columns: 1fr;
+    gap: 26px; /* more vertical breathing room */
   }
 
+  /* =========================
+     CARD (mobile-first stack)
+  ========================== */
   .blog-card{
-    border-radius: 12px;
+    border-radius: 14px;
   }
 
   .blog-media{
-    height: 190px;
+    height: 180px;
   }
 
   .blog-body{
-    padding: 16px 16px 14px;
-    min-height: auto;     /* important: don’t force tall cards on mobile */
+    padding: 18px;
+    gap: 10px;
   }
 
   .blog-title{
-    font-size: 20px;
-    line-height: 1.15;
+    font-size: 21px;
+    line-height: 1.2;
   }
 
   .blog-excerpt{
     font-size: 13px;
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
-  /* Badge: smaller so it doesn't look crowded */
+  /* Badge floats better on mobile */
   .blog-pill{
     top: 10px;
     right: 10px;
-    padding: 6px 10px;
+    padding: 6px 12px;
     font-size: 11px;
   }
 
-  /* Pagination: easier to tap */
+  /* =========================
+     CTA LINK → FULL WIDTH
+  ========================== */
+  .blog-link{
+    margin-top: 10px;
+    font-size: 13px;
+    justify-self: flex-start;
+  }
+
+  /* =========================
+     PAGINATION → vertical-friendly
+  ========================== */
   .pagination{
-    padding: 6px 0 18px;
+    padding: 10px 0 20px;
   }
 
   .pager{
-    gap: 12px;
+    gap: 10px;
   }
 
   .page-link{
     font-size: 16px;
-    padding: 6px 10px;    /* tap area */
-    border-radius: 10px;
+    padding: 8px 14px;
+    border-radius: 999px;
+  }
+
+  /* =========================
+     Safety: prevent horizontal scroll
+  ========================== */
+  html, body{
+    overflow-x: hidden;
   }
 }
+
 
   </style>
 </head>

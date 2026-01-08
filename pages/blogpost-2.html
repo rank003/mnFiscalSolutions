@@ -6,9 +6,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <title>Nosso blog — MNfiscalsolutions</title>
  <link rel="stylesheet" href="../css/styles.css">
-  <style>
-
-
+ <style>
 /*  PAGE HERO (matches screenshot) */
 .blog-hero{
   padding: 56px 0 28px;
@@ -112,7 +110,6 @@
   text-decoration: underline;
 }
 
-
 /* ✅ PAGINATION (like your screenshot: simple 1 2) */
 .pagination{
   padding: 10px 0 24px; /* space before footer */
@@ -142,16 +139,105 @@
 }
 
 
-/* ✅ RESPONSIVE like you want */
-@media (max-width: 980px){
-  .blog-grid{ grid-template-columns: repeat(2, 1fr); }
-  .blog-media{ height: 210px; }
-}
 @media (max-width: 620px){
-  .container{ width: min(var(--max), calc(100% - 28px)); }
-  .blog-grid{ grid-template-columns: 1fr; }
-  body::after{ display:none; } /* optional on very small screens */
+
+  /* =========================
+     HERO (stacked + breathable)
+  ========================== */
+  .blog-hero{
+    padding: 28px 0 22px;
+    text-align: center;
+  }
+
+  .blog-hero h1{
+    font-size: 32px;
+    line-height: 1.08;
+    margin-bottom: 12px;
+  }
+
+  .blog-hero p{
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0 12px;
+  }
+
+  /* =========================
+     GRID → ONE COLUMN
+  ========================== */
+  .blog-grid{
+    grid-template-columns: 1fr;
+    gap: 26px; /* more vertical breathing room */
+  }
+
+  /* =========================
+     CARD (mobile-first stack)
+  ========================== */
+  .blog-card{
+    border-radius: 14px;
+  }
+
+  .blog-media{
+    height: 180px;
+  }
+
+  .blog-body{
+    padding: 18px;
+    gap: 10px;
+  }
+
+  .blog-title{
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .blog-excerpt{
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* Badge floats better on mobile */
+  .blog-pill{
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  /* =========================
+     CTA LINK → FULL WIDTH
+  ========================== */
+  .blog-link{
+    margin-top: 10px;
+    font-size: 13px;
+    justify-self: flex-start;
+  }
+
+  /* =========================
+     PAGINATION → vertical-friendly
+  ========================== */
+  .pagination{
+    padding: 10px 0 20px;
+  }
+
+  .pager{
+    gap: 10px;
+  }
+
+  .page-link{
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 999px;
+  }
+
+  /* =========================
+     Safety: prevent horizontal scroll
+  ========================== */
+  html, body{
+    overflow-x: hidden;
+  }
 }
+
+
   </style>
 </head>
 
